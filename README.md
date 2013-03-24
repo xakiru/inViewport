@@ -3,7 +3,7 @@ $(selector).inViewport()
 
 Lightweight function writen in javascript that add the function inViewport to jquery.
 
-*require : 
+
 
 ## Usage
 
@@ -15,12 +15,10 @@ Just take an exemple for this element that have an id `item` .
 ```html
 <script>
 $(function () {
-
 	if($('#items').inViewport()){
 		// code if the element is visible
 		console.log('items is visible');
 	}
-
 });
 </script>
 ```
@@ -36,6 +34,13 @@ var defaultFull = false ;       // true, false
 or we can specify the direction and the parametre for testing the full element or just part of it:
 ```javascript
 $('#selector').inViewport('vertical',false); 	//(['vertical'|'both'|'horizontal'],[false|true])
+```
+
+## Require
+
+```html
+<script src="js/jquery.js"></script>
+<script src="js/inviewport.min.js"></script>
 ```
 
 Enjoy.
