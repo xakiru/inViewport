@@ -3,15 +3,15 @@ $(selector).inViewport()
 
 # inViewport function for jQuery
 
-Lightweight function (700 octets) that add the function inViewport to javascript.
+Lightweight function writen in javascript that add the function inViewport to jquery.
 
 ## Usage
 
-Just make class `.waterfall` on container and that’s all.
+Just take an exemple for this element that have an id `item` .
 ```html
 <div id="item">Item 1</div>
 ```
- It's simple to use $("#element").inViewport();  is a simple jquery plugin to test if an element is visible on the screen: 
+ To test if the is visible on the screen use `$("#element").inViewport();` : 
 ```html
 <script>
 $(function () {
@@ -35,5 +35,7 @@ var defaultFull = false ;       // true, false
 
 or we can specify the direction and the parametre for testing the full element or just part of it:
 ```javascript
-$('#selector').inViewport('vertical',false)
+$('#selector').inViewport('vertical',false); 	//(['vertical'|'both'|'horizontal'],[false|true])
 ```
+
+Enjoy.
