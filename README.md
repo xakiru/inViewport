@@ -1,9 +1,9 @@
 $(selector).inViewport()
 ==========
 
-# inViewport function for jQuery
-
 Lightweight function writen in javascript that add the function inViewport to jquery.
+
+*require : 
 
 ## Usage
 
