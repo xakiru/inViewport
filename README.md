@@ -18,7 +18,7 @@ $(function () {
 
 	if($('#items').inViewport()){
 		// code if the element is visible
-		alert('items is visible');
+		console.log('items is visible');
 	}
 
 });
