@@ -7,7 +7,7 @@ Lightweight function writen in javascript that add the function inViewport to jq
 
 ## Usage
 
-Just take an exemple for this element that have an id `item` .
+Just take an exemple for this element that have an `item` id.
 ```html
 <div id="item">Item 1</div>
 ```
@@ -31,7 +31,7 @@ var defaultDirection = 'both';  //both,vertical,horizontal
 var defaultFull = false ;       // true, false
 ```
 
-or we can specify the direction and the parametre for testing the full element or just part of it:
+or we can specify the direction and the testing region [full|partial] of an element when you're using the function:
 ```javascript
 $('#selector').inViewport('vertical',false); 	//(['vertical'|'both'|'horizontal'],[false|true])
 ```
@@ -43,4 +43,3 @@ $('#selector').inViewport('vertical',false); 	//(['vertical'|'both'|'horizontal'
 <script src="js/inviewport.min.js"></script>
 ```
 
-Enjoy.
