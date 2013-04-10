@@ -1,1 +1,182 @@
-"test" 
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>inviewport - Jquery Plugin - by Xakiru</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/coolblue.css" />
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/inViewport.js"></script>
+    <script>
+        //add the highlight class to the testing elements
+        $(document).ready(function () {
+            $(".test").addClass('mylinkholder');
+        });
+
+         //login status
+
+        function Log(msg) {
+            logDiv = document.getElementById('logs');
+            logDiv.innerHTML = logDiv.innerHTML + msg + "<br />";
+            $(".console").scrollTop($(".console").scrollTop() + 100);
+
+        }
+
+         //Hightlight and log it when an element apears or disapear
+
+        function AplyScrollTest(ele) {
+            if (ele.inViewport()) {
+                Log(ele.attr("id") + " : <span style='color:green;'>In</span>");
+                ele.css("backgroundColor", "")
+            } else {
+                Log(ele.attr("id") + " : <span style='color:red;'>Out</span>");
+                ele.css("backgroundColor", "yellow")
+            }
+        }
+
+         //listner on scroll
+        $(window).scroll(function () {
+            document.getElementById('logs').innerHTML = "";
+            $(".test").each(function () {
+                AplyScrollTest($(this));
+            });
+        })
+    </script>
+</head>
+<body id="top">
+    <!--header -->
+    <div id="header-wrap">
+        <header>
+            <hgroup>
+                 <h1>Demo {inViewport}</h1>
+
+                 <h3>Simple, Fast and Easy.</h3>
+
+            </hgroup>
+            <nav>
+                <ul>
+                    <li id="current"><a href="https://github.com/xakiru/inViewport">InViewport - Download</a><span></span>
+                    </li>
+                    <li><a href="index.html">..</a><span></span>
+                    </li>
+                </ul>
+            </nav>
+           
+            <!--/header-->
+        </header>
+    </div>
+    <div class="console"> <span class="consoletitle">Debug :</span>
+
+        <div id="logs">Scroll down !
+            <br />
+        </div>
+    </div>
+    <!-- content-wrap -->
+    <div id="content-wrap">
+        <!-- content -->
+        <div id="content" class="clearfix">
+            <!-- main -->
+            <div id="main">
+                <article class="post">
+                    <div class="primary">
+                         <h2><a id ="Title" href="index.html" class="test">HTML5</a></h2>
+
+                        <div class="image-section">
+                            <img src="images/img-post.jpg" alt="image post" height="206" width="498" />
+                        </div>
+                        <p id="paragraph" class="test">is a markup language for structuring and presenting content for the World Wide Web and a core technology of the Internet. It is the fifth revision of the HTML standard (created in 1990 and standardized as HTML 4 as of 1997)[2] and, as of December 2012,
+                            is a W3C Candidate Recommendation.[3] Its core aims have been to improve the language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by computers and devices (web browsers, parsers, etc.).
+                            HTML5 is intended to subsume not only HTML 4, but XHTML 1 and DOM Level 2 HTML as well.[2] Following its immediate predecessors HTML 4.01 and XHTML 1.1, HTML5 is a response to the observation that the HTML and XHTML in common use on the World Wide Web
+                            are a mixture of features introduced by various specifications, along with those introduced by software products such as web browsers, those established by common practice, and the many syntax errors in existing web documents.[4] It is also an attempt
+                            to define a single markup language that can be written in either HTML or XHTML syntax. It includes detailed processing models to encourage more interoperable implementations; it extends, improves and rationalises the markup available for documents, and
+                            introduces markup and application programming interfaces (APIs) for complex web applications.[5] For the same reasons, HTML5 is also a potential candidate for cross-platform mobile applications. Many features of HTML5 have been built with the consideration
+                            of being able to run on low-powered devices such as smartphones and tablets. In December 2011, research firm Strategy Analytics forecast sales of HTML5 compatible phones will top 1 billion in 2013.[6] In particular, HTML5 adds many new syntactic features.
+                            These include the new
+                            < video>,
+                                < audio>and
+                                    < canvas>elements, as well as the integration of scalable vector graphics (SVG) content (that replaces the uses of generic
+                                        < object>tags) and MathML for mathematical formulas. These features are designed to make it easy to include and handle multimedia and graphical content on the web without having to resort to proprietary plugins and APIs. Other new elements, such as
+                                            < section>,
+                                                < article>,
+                                                    < header>and
+                                                        < nav>, are designed to enrich the semantic content of documents. New attributes have been introduced for the same purpose, while some elements and attributes have been removed. Some elements, such as
+                                                            < a>,
+                                                                < cite>and
+                                                                    < menu>have been changed, redefined or standardized. The APIs and Document Object Model (DOM) are no longer afterthoughts, but are fundamental parts of the HTML5 specification.[5] HTML5 also defines in some detail the required processing for invalid documents
+                                                                        so that syntax errors will be treated uniformly by all conforming browsers and other user agents.[7]</p>
+                        <p> <span id="Source" class="test">From Wikipedia, the free encyclopedia</span>
+
+                        </p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <aside>
+                        <p class="dateinfo">JAN<span>31</span>
+                        </p>
+                        <div id="userInfo" class="post-meta test">
+                             <h4>Post Info</h4>
+
+                            <ul>
+                                <li class="user"><a href="#">Xakiru</a>
+                                </li>
+                                <li class="time"><a href="#">12:30 PM</a>
+                                </li>
+                                <li class="comment"><a href="#">2 Comments</a>
+                                </li>
+                                <li class="permalink"><a href="#">Permalink</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </article>
+                <!-- /main -->
+            </div>
+            <!-- sidebar -->
+            <div id="sidebar">
+                <div id="AboutMe" class="about-me test">
+                     <h3>Right Bloc</h3>
+
+                    <p>
+                        <a href="index.html">
+                            <img src="images/gravatar.jpg" width="42" height="42" alt="firefox" class="align-left" />
+                        </a>An exemple of a bloc showing personal informations.</p>
+                </div>
+                <!-- /sidebar -->
+            </div>
+            <!-- content -->
+        </div>
+        <!-- /content-out -->
+    </div>
+    <!-- footer -->
+    <footer>
+        <p id="footer" class="footer-left test">&copy; 2011 Copyright Info &nbsp; &nbsp; &nbsp; Design by styleshout</p>
+        <!-- /footer -->
+    </footer>
+</body>
+
+</html>
