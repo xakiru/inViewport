@@ -5,7 +5,7 @@
 * @see https://github.com/Xakiru/inViewport
 * @example $("#element").inViewport('vertical',false);
 */
-
+//change from sukayna
 
 $.fn.inViewport = function(dir, full){
 //  config
